@@ -25,7 +25,7 @@ public class Main extends BasePage {
         return this;
     }
     public Main chooseCategory() {
-        click(By.xpath("//label[@class='j-list-item filter__item filter__item--checkbox'][6]"));
+        click(By.xpath("//label[contains(text(),'Карандаш')]"));
         return this;
     }
     public Main chooseDeliveryTime() {
