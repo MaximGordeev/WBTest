@@ -35,8 +35,11 @@ public class BasePage {
         driver.findElement(elementBy).click();
     }
     public void moveAndClick(By elementBy) {
+        wait.until(ExpectedConditions.elementToBeClickable(elementBy));
         WebElement element = driver.findElement(elementBy);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+        System.out.println(element.isDisplayed());
+
         Actions actionsButtonClick = new Actions(driver);
         actionsButtonClick.moveToElement(element).click().build().perform();
     }

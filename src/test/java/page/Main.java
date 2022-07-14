@@ -25,7 +25,7 @@ public class Main extends BasePage {
         return this;
     }
     public Main chooseCategory() {
-        click(By.xpath("//label[@class='j-list-item filter__item filter__item--checkbox'][2]"));
+        click(By.xpath("//label[@class='j-list-item filter__item filter__item--checkbox'][6]"));
         return this;
     }
     public Main chooseDeliveryTime() {
@@ -57,7 +57,7 @@ public class Main extends BasePage {
     }
     public Main clickOnBtnAddToCart() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        moveAndClick(By.xpath("//button[@class='btn-main']/span[text()='Добавить в корзину']"));
+        moveAndClick(By.xpath("//div[@class='product-page__order-container']/div/button/span[contains(text(),'Добавить')]"));
         return this;
     }
     public Main clickOnBtnGotoCart() {
